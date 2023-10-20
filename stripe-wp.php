@@ -21,4 +21,5 @@
  * License URI:       https://opensource.org/license/mit/
  * Update URI:        https://github.com/ethanscorey/stripe-wp/releases
  */
+
 namespace StripeWP;

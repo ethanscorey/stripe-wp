@@ -9,20 +9,34 @@
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
+		"format:php": "wp-env run --env-cwd='/var/www/html/wp-content/plugins/stripe-wp' cli composer format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
+		"lint:php": "wp-env run --env-cwd='/var/www/html/wp-content/plugins/stripe-wp' cli composer lint",
 		"lint:md:docs": "wp-scripts lint-md-docs",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start",
 		"test:e2e": "wp-scripts test-e2e",
+		"test:php": "wp-env run --env-cwd=wp-content/plugins/stripe-wp tests-wordpress composer phpunit",
 		"test:unit": "wp-scripts test-unit-js",
 		"prepare": "husky install"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
 		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"lint-staged": {
+		"*.{js,json,ts,tsx,yml,yaml}": [
+			"wp-scripts format"
+		],
+		"*.{js,ts,tsx}": [
+			"wp-scripts lint-js"
+		],
+		"*.scss": [
+			"wp-scripts lint-style"
+		]
 	},
 	"author": {
 		"name": "Ethan Corey",

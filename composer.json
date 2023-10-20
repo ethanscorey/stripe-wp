@@ -1,12 +1,15 @@
 {
 	"scripts": {
-		"phpunit": "phpunit"
+		"phpunit": "phpunit",
+		"format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=.phpcs.xml.dist"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^9.6",
 		"phpcompatibility/phpcompatibility-wp": "^2.1.3",
 		"squizlabs/php_codesniffer": "*",
-		"wp-coding-standards/wpcs": "^3.0"
+		"wp-coding-standards/wpcs": "^3.0",
+		"yoast/phpunit-polyfills": "^2.0"
 	},
 	"config": {
 		"allow-plugins": {
