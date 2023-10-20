@@ -1,0 +1,19 @@
+{
+	"scripts": {
+		"phpunit": "phpunit"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.6",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.3",
+		"squizlabs/php_codesniffer": "*",
+		"wp-coding-standards/wpcs": "^3.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"require": {
+		"stripe/stripe-php": "^13.0"
+	}
+}
