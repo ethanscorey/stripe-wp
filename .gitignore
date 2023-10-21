@@ -4,3 +4,6 @@ vendor
 composer.lock
 stripe-wp.zip
 blocks/build
+/test-results/
+/playwright-report/
+/playwright/.cache/
