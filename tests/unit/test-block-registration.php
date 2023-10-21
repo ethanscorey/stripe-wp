@@ -11,7 +11,7 @@
 
 namespace StripeWP\Tests\BlockRegistration;
 
-use WP_Mock\Functions;
+use WP_Mock;
 
 /**
  * Block registration test case.
@@ -44,5 +44,16 @@ class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 			$expected,
 			\StripeWP\get_block_path( $test_value ),
 		);
+	}
+
+	/**
+	 * Test that donate form block is registered.
+	 */
+	public function test_register_donate_form_block(): void {
+		WP_Mock::userFunction( 'register_block_type' )
+			->once()
+			->with( \StripeWP\get_block_path( 'swp-donate-form' ) )
+			->andReturn( true );
+		$this->assertNull( \StripeWP\register_donate_form_block() );
 	}
 }

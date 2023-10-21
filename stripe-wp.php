@@ -44,3 +44,13 @@ define( __NAMESPACE__ . '\BLOCK_DIR_PATH', PLUGIN_DIR_PATH . 'blocks/build/' );
 function get_block_path( string $block_name ) {
 	return BLOCK_DIR_PATH . $block_name;
 }
+
+
+/**
+ * Register the donate form block.
+ */
+function register_donate_form_block() {
+	$block_path = get_block_path( 'swp-donate-form' );
+	register_block_type( $block_path );
+}
+add_action( 'init', __NAMESPACE__ . '\register_donate_form_block' );
