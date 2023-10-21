@@ -10,7 +10,7 @@
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
-		"format:php": "wp-env run --env-cwd='/var/www/html/wp-content/plugins/stripe-wp' cli composer format",
+		"format:php": "npm run composer format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"lint:php": "npm run composer lint",
@@ -20,8 +20,10 @@
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start",
 		"test:e2e": "wp-scripts test-e2e",
-		"test:php": "npm run composer:test phpunit",
-		"test:unit": "wp-scripts test-unit-js",
+		"test:php": "npm-run-all test:integration:php test:unit:php",
+		"test:integration:php": "npm run composer:test phpunit -- -- -- --bootstrap tests/integration/bootstrap.php --testsuite integration",
+		"test:unit:php": "npm run composer:test phpunit -- -- -- --bootstrap tests/unit/bootstrap.php --testsuite unit",
+		"test:unit:js": "wp-scripts test-unit-js",
 		"prepare": "husky install"
 	},
 	"prettier": "@wordpress/prettier-config",
@@ -49,6 +51,7 @@
 		"@wordpress/env": "^8.10.0",
 		"@wordpress/scripts": "^26.15.0",
 		"husky": "^8.0.3",
-		"lint-staged": "^15.0.2"
+		"lint-staged": "^15.0.2",
+		"npm-run-all": "^4.1.5"
 	}
 }

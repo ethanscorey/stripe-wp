@@ -29,7 +29,7 @@ require_once "{$swp_tests_dir}/includes/functions.php";
  * Manually load the plugin being tested.
  */
 function swp_manually_load_plugin() {
-	require dirname( __DIR__ ) . '/stripe-wp.php';
+	require dirname( dirname( __DIR__ ) ) . '/stripe-wp.php';
 }
 
 tests_add_filter( 'muplugins_loaded', 'swp_manually_load_plugin' );

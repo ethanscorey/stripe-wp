@@ -3,3 +3,4 @@ vendor
 .phpunit.result.cache
 composer.lock
 stripe-wp.zip
+blocks/build
