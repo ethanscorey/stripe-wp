@@ -24,4 +24,9 @@
 
 namespace StripeWP;
 
-define( __NAMESPACE__ . '\PLUGIN_DIR_PATH', 'foo' );
+if ( function_exists( 'plugin_dir_path' ) )  {
+	define( __NAMESPACE__ . '\PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
+} else {
+	// For unit testing without WP functions loaded
+	define(  __NAMESPACE__ . '\PLUGIN_DIR_PATH', dirname( __FILE__ ) . '/tests' );
+}
