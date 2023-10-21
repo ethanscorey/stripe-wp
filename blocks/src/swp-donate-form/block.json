@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swp-donate-form/swp-donate-form",
+	"version": "0.1.0",
+	"title": "Stripe Donation Form",
+	"category": "widgets",
+	"icon": "heart",
+	"description": "Collect donations using Stripe.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "swp-donate-form",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
