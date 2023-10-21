@@ -35,9 +35,14 @@ class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 	}
 
 	/**
-	 * Test that blocks are registered.
+	 * Test that we can get the block path.
 	 */
-	public function test_register_price_option_block() {
-		$this->assertTrue( true );
+	public function test_get_block_path(): void {
+		$test_value = 'test-block';
+		$expected   = \StripeWP\BLOCK_DIR_PATH . $test_value;
+		$this->assertEquals(
+			$expected,
+			\StripeWP\get_block_path( $test_value ),
+		);
 	}
 }

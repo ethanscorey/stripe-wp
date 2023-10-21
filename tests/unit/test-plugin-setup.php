@@ -22,10 +22,14 @@ class PluginSetupTest extends TestCase {
 	 * Test that constants are defined.
 	 */
 	public function test_register_price_option_block() {
+		$test_dir = dirname( __DIR__ ) . '/';
 		$this->assertEquals(
-			dirname( __DIR__ ),
+			$test_dir,
 			\StripeWP\PLUGIN_DIR_PATH,
-			'Unexpected plugin path ' . \StripeWP\PLUGIN_DIR_PATH
+		);
+		$this->assertEquals(
+			$test_dir . 'blocks/build/',
+			\StripeWP\BLOCK_DIR_PATH,
 		);
 	}
 }

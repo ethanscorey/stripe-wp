@@ -24,9 +24,23 @@
 
 namespace StripeWP;
 
-if ( function_exists( 'plugin_dir_path' ) )  {
+if ( function_exists( 'plugin_dir_path' ) ) {
 	define( __NAMESPACE__ . '\PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 } else {
-	// For unit testing without WP functions loaded
-	define(  __NAMESPACE__ . '\PLUGIN_DIR_PATH', dirname( __FILE__ ) . '/tests' );
+	// Set to test directory if we are running unit tests.
+	define( __NAMESPACE__ . '\PLUGIN_DIR_PATH', __DIR__ . '/tests/' );
+}
+define( __NAMESPACE__ . '\BLOCK_DIR_PATH', PLUGIN_DIR_PATH . 'blocks/build/' );
+
+
+/**
+ * Get the path to a block's directory.
+ *
+ * Locate the block's directory within the plugin directory.
+ *
+ * @param string $block_name The name of the block.
+ * @return string The block directory path.
+ */
+function get_block_path( string $block_name ) {
+	return BLOCK_DIR_PATH . $block_name;
 }
