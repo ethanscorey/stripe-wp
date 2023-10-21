@@ -13,27 +13,31 @@ namespace StripeWP\Tests\BlockRegistration;
 
 use WP_Mock\Functions;
 
+/**
+ * Block registration test case.
+ */
 class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 
-    public function setUp(): void {
-        parent::setUp();
+	/**
+	 * Set up WP_Mock
+	 */
+	public function setUp(): void {
+		parent::setUp();
 		\WP_Mock::setUp();
-    }
+	}
 
-    public function tearDown(): void {
+	/**
+	 * Tear down WP_Mock
+	 */
+	public function tearDown(): void {
 		\WP_Mock::tearDown();
-        parent::tearDown();
-    }
+		parent::tearDown();
+	}
 
-    public function test_register_price_option_block() {
-		/*
-		\WP_Mock::userFunction( '\register_block_type' )
-            ->once()
-            ->with( \StripeWP\PLUGIN_DIR_PATH . 'blocks/build/swp-price-option' )
-            ->andReturn( true );
-        \StripeWP\register_price_option_block();
-		 */
+	/**
+	 * Test that blocks are registered.
+	 */
+	public function test_register_price_option_block() {
 		$this->assertTrue( true );
-    }
+	}
 }
-?>

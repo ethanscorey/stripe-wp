@@ -24,5 +24,4 @@
 
 namespace StripeWP;
 
-
 define( __NAMESPACE__ . '\PLUGIN_DIR_PATH', 'foo' );
