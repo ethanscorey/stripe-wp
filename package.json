@@ -52,6 +52,7 @@
 		"@testing-library/jest-dom": "^6.1.4",
 		"@testing-library/react": "^14.0.0",
 		"@types/node": "^20.8.7",
+		"@wordpress/block-editor": "^12.12.0",
 		"@wordpress/e2e-test-utils-playwright": "^0.12.0",
 		"@wordpress/env": "^8.10.0",
 		"@wordpress/scripts": "^26.15.0",
