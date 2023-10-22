@@ -7,6 +7,7 @@
 	"category": "swp-components",
 	"icon": "money",
 	"description": "Add a price option to a Stripe donation form",
+	"parent": "stripe-wp/donate-form",
 	"keywords": [ "stripe", "price", "donation", "donate" ],
 	"example": {},
 	"supports": {
