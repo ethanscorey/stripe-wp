@@ -12,7 +12,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
-			<InnerBlocks />
+			<InnerBlocks allowedBlocks={ [ 'stripe-wp/price-option' ] } />
 		</div>
 	);
 }

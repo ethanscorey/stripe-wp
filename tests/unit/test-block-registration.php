@@ -56,4 +56,15 @@ class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 			->andReturn( true );
 		$this->assertNull( \StripeWP\register_donate_form_block() );
 	}
+
+	/**
+	 * Test that price option block is registered.
+	 */
+	public function test_register_price_option_block(): void {
+		WP_Mock::userFunction( 'register_block_type' )
+			->once()
+			->with( \StripeWP\get_block_path( 'price-option' ) )
+			->andReturn( true );
+		$this->assertNull( \StripeWP\register_price_option_block() );
+	}
 }

@@ -54,3 +54,13 @@ function register_donate_form_block() {
 	register_block_type( $block_path );
 }
 add_action( 'init', __NAMESPACE__ . '\register_donate_form_block' );
+
+
+/**
+ * Register the price option block.
+ */
+function register_price_option_block() {
+	$block_path = get_block_path( 'price-option' );
+	register_block_type( $block_path );
+}
+add_action( 'init', __NAMESPACE__ . '\register_price_option_block' );

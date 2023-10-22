@@ -1,0 +1,5 @@
+<!-- wp:stripe-wp/donate-form -->
+<div class="wp-block-stripe-wp-donate-form"><!-- wp:stripe-wp/price-option -->
+<p class="wp-block-stripe-wp-price-option">Swp Price Option – hello from the saved content!</p>
+<!-- /wp:stripe-wp/price-option --></div>
+<!-- /wp:stripe-wp/donate-form -->
