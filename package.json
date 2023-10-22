@@ -19,7 +19,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start",
-		"test:e2e": "wp-scripts test-e2e",
+		"test:e2e": "wp-scripts test-playwright",
 		"test:php": "npm-run-all test:integration:php test:unit:php",
 		"test:integration:php": "npm run composer:test phpunit -- -- -- --bootstrap tests/integration/bootstrap.php --testsuite integration",
 		"test:unit:php": "npm run composer:test phpunit -- -- -- --bootstrap tests/unit/bootstrap.php --testsuite unit",
@@ -50,6 +50,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.39.0",
 		"@types/node": "^20.8.7",
+		"@wordpress/e2e-test-utils-playwright": "^0.12.0",
 		"@wordpress/env": "^8.10.0",
 		"@wordpress/scripts": "^26.15.0",
 		"husky": "^8.0.3",

@@ -1,14 +1,14 @@
 <?php
 /**
- * StripeWP
+ * Stripe WP
  *
- * @package   StripeWP
+ * @package   Stripe WP
  * @author    Ethan Corey
  * @copyright 2023
  * @license   MIT
  *
  * @wordpress-plugin
- * Plugin Name:       StripeWP
+ * Plugin Name:       Stripe WP
  * Plugin URI:        https://github.com/ethanscorey/stripe-wp/
  * Description:       A Stripe integration for WordPress.
  * Version:           1.0.0
@@ -50,7 +50,7 @@ function get_block_path( string $block_name ) {
  * Register the donate form block.
  */
 function register_donate_form_block() {
-	$block_path = get_block_path( 'swp-donate-form' );
+	$block_path = get_block_path( 'donate-form' );
 	register_block_type( $block_path );
 }
 add_action( 'init', __NAMESPACE__ . '\register_donate_form_block' );

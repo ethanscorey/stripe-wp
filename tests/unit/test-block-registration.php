@@ -52,7 +52,7 @@ class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 	public function test_register_donate_form_block(): void {
 		WP_Mock::userFunction( 'register_block_type' )
 			->once()
-			->with( \StripeWP\get_block_path( 'swp-donate-form' ) )
+			->with( \StripeWP\get_block_path( 'donate-form' ) )
 			->andReturn( true );
 		$this->assertNull( \StripeWP\register_donate_form_block() );
 	}

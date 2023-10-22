@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"emitDeclarationOnly": false,
+		"allowJs": true,
+		"checkJs": false
+	},
+	"include": [ "**/*" ],
+	"exclude": []
+}
