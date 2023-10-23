@@ -10,11 +10,16 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save( { attributes } ) {
 	return (
-		<input
-			{ ...useBlockProps.save() }
-			type="radio"
-			name="selectedPrice"
-			value={ attributes.unit_amount }
-		/>
+		<div { ...useBlockProps.save() }>
+			<label>
+				<input
+					type="radio"
+					name="selectedPrice"
+					value={ attributes.unit_amount }
+				/>
+				{ attributes.unit_amount }
+			</label>
+			<i>$</i>
+		</div>
 	);
 }
