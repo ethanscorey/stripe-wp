@@ -16,9 +16,9 @@ import './editor.scss';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	return (
-		<div { ...useBlockProps() }>
+		<label { ...useBlockProps() }>
+			<span className="swp-d-none">{ __( 'Price option:' ) }</span>
 			<TextControl
-				label={ __( 'Price Amount:' ) }
 				type="number"
 				value={ attributes.unit_amount }
 				step="0.01"
@@ -28,6 +28,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					setAttributes( { unit_amount: value } )
 				}
 			/>
-		</div>
+			<i>$</i>
+		</label>
 	);
 }
