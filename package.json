@@ -9,7 +9,7 @@
 		"build": "wp-scripts build --webpack-copy-php --webpack-src-dir=blocks/src --output-path=blocks/build",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
-		"format": "wp-scripts format",
+		"format": "wp-scripts format && stylelint \"**/*.scss\" --fix",
 		"format:php": "npm run composer format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js --fix",
@@ -28,7 +28,10 @@
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
-		"extends": "@wordpress/stylelint-config/scss"
+		"extends": "@wordpress/stylelint-config/scss",
+		"rules": {
+			"selector-class-pattern": "(components|wp-block|dashicons|swp)(-[a-z]+)*(__[a-z-]+)*"
+		}
 	},
 	"lint-staged": {
 		"*.{js,json,ts,tsx,yml,yaml}": [

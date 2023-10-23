@@ -16,19 +16,21 @@ import './editor.scss';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	return (
-		<label { ...useBlockProps() }>
-			<span className="swp-d-none">{ __( 'Price option:' ) }</span>
-			<TextControl
-				type="number"
-				value={ attributes.unit_amount }
-				step="0.01"
-				min="0.01"
-				max="99_999.99"
-				onChange={ ( value ) =>
-					setAttributes( { unit_amount: value } )
-				}
-			/>
-			<i>$</i>
-		</label>
+		<div { ...useBlockProps() }>
+			<div className="wp-block-stripe-wp-price-option__input-container">
+				<span className="swp-d-none">{ __( 'Price option:' ) }</span>
+				<TextControl
+					type="number"
+					value={ attributes.unit_amount }
+					step="0.01"
+					min="0.01"
+					max="99_999.99"
+					onChange={ ( value ) =>
+						setAttributes( { unit_amount: value } )
+					}
+				/>
+				<i>$</i>
+			</div>
+		</div>
 	);
 }
