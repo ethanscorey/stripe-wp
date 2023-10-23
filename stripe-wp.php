@@ -64,3 +64,15 @@ function register_price_option_block() {
 	register_block_type( $block_path );
 }
 add_action( 'init', __NAMESPACE__ . '\register_price_option_block' );
+
+
+add_filter( 'block_categories_all' , function( $categories ) {
+
+    // Adding a new category.
+	$categories[] = array(
+		'slug'  => 'stripe-wp',
+		'title' => 'Stripe'
+	);
+
+	return $categories;
+} );

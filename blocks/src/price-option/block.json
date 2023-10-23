@@ -4,7 +4,7 @@
 	"name": "stripe-wp/price-option",
 	"version": "0.1.0",
 	"title": "Stripe Price Option",
-	"category": "swp-components",
+	"category": "stripe-wp",
 	"icon": "money",
 	"description": "Add a price option to a Stripe donation form",
 	"parent": "stripe-wp/donate-form",

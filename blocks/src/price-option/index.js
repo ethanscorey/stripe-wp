@@ -27,6 +27,15 @@ import metadata from './block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType( metadata.name, {
+	attributes: {
+		unit_amount: {
+			type: 'string',
+			source: 'attribute',
+			selector: 'input',
+			attribute: 'value',
+			default: '',
+		},
+	},
 	/**
 	 * @see ./edit.js
 	 */

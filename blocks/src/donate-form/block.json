@@ -4,7 +4,7 @@
 	"name": "stripe-wp/donate-form",
 	"version": "0.1.0",
 	"title": "Stripe Donation Form",
-	"category": "widgets",
+	"category": "stripe-wp",
 	"icon": "heart",
 	"description": "Collect donations using Stripe.",
 	"example": {},

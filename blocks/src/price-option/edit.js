@@ -1,41 +1,33 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 import { useBlockProps } from '@wordpress/block-editor';
+import { TextControl } from '@wordpress/components';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
 
 /**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
+ * Render editor component for price option block.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {Element} Element to render.
+ * @param {Object}   props               The block properties.
+ * @param {Object}   props.attributes    The block attributes.
+ * @param {Function} props.setAttributes The attribute setter.
+ * @return {Element} The price option component.
  */
-export default function Edit() {
+export default function Edit( { attributes, setAttributes } ) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Swp Price Option – hello from the editor!',
-				'swp-price-option'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<TextControl
+				label={ __( 'Price Amount:' ) }
+				type="number"
+				value={ attributes.unit_amount }
+				step="0.01"
+				min="0.01"
+				max="99_999.99"
+				onChange={ ( value ) =>
+					setAttributes( { unit_amount: value } )
+				}
+			/>
+		</div>
 	);
 }
