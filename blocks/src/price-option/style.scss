@@ -12,14 +12,19 @@
 	position: relative;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	display: flex;
+	gap: 1ch;
 	justify-content: space-between;
 
 	.wp-block-stripe-wp-price-option__currency {
-		margin-inline-start: 30%;
+		margin-inline-start: 25%;
+		inline-size: clamp(1ch, 15%, 20%);
+		text-align: right;
 	}
 
 	.wp-block-stripe-wp-price-option__amount {
-		margin-inline-end: 30%;
+		margin-inline-end: 25%;
+		inline-size: clamp(10ch, 15%, 20%);
+		text-align: left;
 	}
 
 	input[type="radio"] {

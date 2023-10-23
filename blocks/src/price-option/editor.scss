@@ -7,46 +7,34 @@
 .wp-block-stripe-wp-price-option {
 	border: 1.5px solid #000;
 	margin-block: 1rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	display: flex;
+	justify-content: space-evenly;
 
 	.swp-d-none {
 		display: none;
 	}
 
-	.wp-block-stripe-wp-price-option__input-container {
-		position: relative;
-		inline-size: 100%;
+	.components-base-control {
+		font-size: inherit;
+	}
 
-		.components-base-control {
-			font-size: inherit;
-		}
+	.components-base-control__field {
+		font-size: inherit;
+	}
 
-		.components-base-control__field {
-			font-size: inherit;
-		}
+	.components-text-control__input {
+		background-color: inherit;
+		box-shadow: none;
+		border: none;
+		outline: none;
+		color: inherit;
+		font-size: inherit;
+		padding: 0;
+		text-align: left;
 
-		.components-text-control__input {
-			background-color: inherit;
+		&:focus {
 			box-shadow: none;
-			border: none;
-			outline: none;
-			color: inherit;
-			font-size: inherit;
-			text-align: center;
-
-			&:focus {
-				box-shadow: none;
-			}
-		}
-
-		> i {
-			display: block;
-			font-style: normal;
-			pointer-events: none;
-			position: absolute;
-			text-align: center;
-			top: 50%;
-			transform: translateY(-50%);
-			inline-size: 30%;
 		}
 	}
 }
