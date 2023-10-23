@@ -5,8 +5,28 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-swp-price-option {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-stripe-wp-price-option {
+	cursor: pointer;
+	border: 1px solid #efefef;
+
+	position: relative;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	display: flex;
+	justify-content: space-between;
+
+	.wp-block-stripe-wp-price-option__currency {
+		margin-inline-start: 30%;
+	}
+
+	.wp-block-stripe-wp-price-option__amount {
+		margin-inline-end: 30%;
+	}
+
+	input[type="radio"] {
+		clip: rect(0, 0, 0, 0);
+		pointer-events: none;
+		position: absolute;
+		box-sizing: border-box;
+		padding: 0;
+	}
 }
