@@ -66,13 +66,26 @@ function register_price_option_block() {
 add_action( 'init', __NAMESPACE__ . '\register_price_option_block' );
 
 
-add_filter( 'block_categories_all' , function( $categories ) {
+/**
+ * Register the submit button block.
+ */
+function register_submit_button_block() {
+	$block_path = get_block_path( 'submit-button' );
+	register_block_type( $block_path );
+}
+add_action( 'init', __NAMESPACE__ . '\register_submit_button_block' );
 
-    // Adding a new category.
-	$categories[] = array(
-		'slug'  => 'stripe-wp',
-		'title' => 'Stripe'
-	);
 
-	return $categories;
-} );
+add_filter(
+	'block_categories_all',
+	function ( $categories ) {
+
+		// Adding a new category.
+		$categories[] = array(
+			'slug'  => 'stripe-wp',
+			'title' => 'Stripe',
+		);
+
+		return $categories;
+	}
+);

@@ -25,4 +25,12 @@ class BlockRegistrationTest extends WP_UnitTestCase {
 		$registered_block = WP_Block_Type_Registry::get_instance()->get_registered( 'stripe-wp/price-option' );
 		$this->assertNotNull( $registered_block, 'Price option block is not registered.' );
 	}
+
+	/**
+	 * Test that submit button block is registered.
+	 */
+	public function test_register_submit_button_block() {
+		$registered_block = WP_Block_Type_Registry::get_instance()->get_registered( 'stripe-wp/submit-button' );
+		$this->assertNotNull( $registered_block, 'Submit button block is not registered.' );
+	}
 }

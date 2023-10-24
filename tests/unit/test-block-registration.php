@@ -67,4 +67,15 @@ class BlockRegistrationTest extends \WP_Mock\Tools\TestCase {
 			->andReturn( true );
 		$this->assertNull( \StripeWP\register_price_option_block() );
 	}
+
+	/**
+	 * Test that submit button block is registered.
+	 */
+	public function test_register_submit_button_block(): void {
+		WP_Mock::userFunction( 'register_block_type' )
+			->once()
+			->with( \StripeWP\get_block_path( 'submit-button' ) )
+			->andReturn( true );
+		$this->assertNull( \StripeWP\register_submit_button_block() );
+	}
 }

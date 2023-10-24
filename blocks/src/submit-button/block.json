@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stripe-wp/submit-button",
+	"version": "0.1.0",
+	"title": "Donate Button",
+	"category": "stripe-wp",
+	"icon": "yes-alt",
+	"description": "A customizable button for donation form submissions.",
+	"example": {},
+	"supports": {
+		"align": true,
+		"color": true,
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		}
+	},
+	"textdomain": "stripe-wp",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
