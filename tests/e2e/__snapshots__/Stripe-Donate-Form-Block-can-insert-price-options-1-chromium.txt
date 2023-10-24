@@ -1,5 +1,5 @@
 <!-- wp:stripe-wp/donate-form -->
 <div class="wp-block-stripe-wp-donate-form"><!-- wp:stripe-wp/price-option -->
-<p class="wp-block-stripe-wp-price-option">Swp Price Option – hello from the saved content!</p>
+<label class="wp-block-stripe-wp-price-option" data-hover-text-color="#fff" data-hover-background-color="#000"><span class="wp-block-stripe-wp-price-option__currency">$</span><span class="wp-block-stripe-wp-price-option__amount"><input type="radio" name="selectedPrice" value=""/></span></label>
 <!-- /wp:stripe-wp/price-option --></div>
 <!-- /wp:stripe-wp/donate-form -->
