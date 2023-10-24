@@ -28,12 +28,20 @@ import metadata from './block.json';
  */
 registerBlockType( metadata.name, {
 	attributes: {
-		unit_amount: {
+		unitAmount: {
 			type: 'string',
 			source: 'attribute',
 			selector: 'input',
 			attribute: 'value',
 			default: '',
+		},
+		hoverTextColor: {
+			type: 'string',
+			default: '#fff',
+		},
+		hoverBackgroundColor: {
+			type: 'string',
+			default: '#000',
 		},
 	},
 	/**

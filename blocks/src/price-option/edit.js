@@ -1,5 +1,9 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	InspectorControls,
+	PanelColorSettings,
+	useBlockProps,
+} from '@wordpress/block-editor';
 import { TextControl } from '@wordpress/components';
 
 import './editor.scss';
@@ -17,18 +21,38 @@ import './editor.scss';
 export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<div { ...useBlockProps() }>
+			<InspectorControls group="list">
+				<PanelColorSettings
+					title={ __( 'Hover Color', 'stripe-wp' ) }
+					initialOpen
+					colorSettings={ [
+						{
+							value: attributes.hoverTextColor,
+							onChange: ( value ) =>
+								setAttributes( { hoverTextColor: value } ),
+							label: __( 'Hover Text Color', 'stripe-wp' ),
+						},
+						{
+							value: attributes.hoverBackgroundColor,
+							onChange: ( value ) =>
+								setAttributes( {
+									hoverBackgroundColor: value,
+								} ),
+							label: __( 'Hover Background Color', 'stripe-wp' ),
+						},
+					] }
+				/>
+			</InspectorControls>
 			<span className="swp-d-none">{ __( 'Price option:' ) }</span>
 			<span className="wp-block-stripe-wp-price-option__currency">$</span>
 			<TextControl
 				type="number"
 				className="wp-block-stripe-wp-price-option__amount"
-				value={ attributes.unit_amount }
+				value={ attributes.unitAmount }
 				step="0.01"
 				min="0.01"
 				max="99_999.99"
-				onChange={ ( value ) =>
-					setAttributes( { unit_amount: value } )
-				}
+				onChange={ ( value ) => setAttributes( { unitAmount: value } ) }
 			/>
 		</div>
 	);

@@ -10,15 +10,19 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save( { attributes } ) {
 	return (
-		<label { ...useBlockProps.save() }>
+		<label
+			{ ...useBlockProps.save() }
+			data-hover-text-color={ attributes.hoverTextColor }
+			data-hover-background-color={ attributes.hoverBackgroundColor }
+		>
 			<span className="wp-block-stripe-wp-price-option__currency">$</span>
 			<span className="wp-block-stripe-wp-price-option__amount">
 				<input
 					type="radio"
 					name="selectedPrice"
-					value={ attributes.unit_amount }
+					value={ attributes.unitAmount }
 				/>
-				{ attributes.unit_amount }
+				{ attributes.unitAmount }
 			</span>
 		</label>
 	);
