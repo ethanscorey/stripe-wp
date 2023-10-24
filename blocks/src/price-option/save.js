@@ -17,13 +17,13 @@ export default function save( { attributes } ) {
 		>
 			<span className="wp-block-stripe-wp-price-option__currency">$</span>
 			<span className="wp-block-stripe-wp-price-option__amount">
-				<input
-					type="radio"
-					name="selectedPrice"
-					value={ attributes.unitAmount }
-				/>
 				{ attributes.unitAmount }
 			</span>
+			<input
+				type="radio"
+				name="selectedPrice"
+				value={ attributes.unitAmount }
+			/>
 		</label>
 	);
 }

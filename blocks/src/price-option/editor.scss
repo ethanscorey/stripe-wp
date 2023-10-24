@@ -23,6 +23,13 @@
 		font-size: inherit;
 	}
 
+	.components-base-control__label {
+		position: absolute;
+		top: -1000px;
+		left: -1000px;
+		inline-size: 0;
+	}
+
 	.components-text-control__input {
 		background-color: inherit;
 		box-shadow: none;

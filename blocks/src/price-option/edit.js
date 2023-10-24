@@ -56,12 +56,12 @@ export default function Edit( { attributes, setAttributes } ) {
 						] }
 					/>
 				</InspectorControls>
-				<span className="swp-d-none">{ __( 'Price option:' ) }</span>
 				<span className="wp-block-stripe-wp-price-option__currency">
 					$
 				</span>
 				<TextControl
 					type="number"
+					label={ __( 'Input Price', 'stripe-wp' ) }
 					className="wp-block-stripe-wp-price-option__amount"
 					value={ attributes.unitAmount }
 					step="0.01"

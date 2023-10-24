@@ -19,4 +19,13 @@ test.describe( 'Stripe Price Option Block', () => {
 		await insertPriceOption( editor );
 		expect( await editor.getEditedPostContent() ).toMatchSnapshot();
 	} );
+
+	test( 'can edit the price', async ( { editor, page } ) => {
+		await insertPriceOption( editor );
+		await editor.canvas
+			.locator( 'role=spinbutton[name="Input Price"]' )
+			.click();
+		await page.keyboard.type( '42' );
+		expect( await editor.getEditedPostContent() ).toMatchSnapshot();
+	} );
 } );

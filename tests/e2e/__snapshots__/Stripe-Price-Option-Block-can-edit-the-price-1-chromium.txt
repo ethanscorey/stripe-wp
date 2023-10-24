@@ -1,0 +1,5 @@
+<!-- wp:stripe-wp/donate-form -->
+<div class="wp-block-stripe-wp-donate-form"><!-- wp:stripe-wp/price-option -->
+<label class="wp-block-stripe-wp-price-option" data-hover-text-color="#fff" data-hover-background-color="#000"><span class="wp-block-stripe-wp-price-option__currency">$</span><span class="wp-block-stripe-wp-price-option__amount">42</span><input type="radio" name="selectedPrice" value="42"/></label>
+<!-- /wp:stripe-wp/price-option --></div>
+<!-- /wp:stripe-wp/donate-form -->
