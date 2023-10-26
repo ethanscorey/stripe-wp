@@ -9,10 +9,11 @@ import '@testing-library/jest-dom/jest-globals';
 import Edit from '../edit';
 
 describe( 'Submit button', () => {
-	it( 'renders without crashing', () => {
-		render( <Edit attributes={ {} } /> );
+	it( 'renders without crashing and matches snapshot', () => {
+		const renderedElement = render( <Edit attributes={ {} } /> );
 		expect(
 			screen.getByRole( 'textbox', { name: 'Enter donate button text' } )
 		).toBeInTheDocument();
+		expect( renderedElement ).toMatchSnapshot();
 	} );
 } );
