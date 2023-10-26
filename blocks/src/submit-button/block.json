@@ -7,6 +7,7 @@
 	"category": "stripe-wp",
 	"icon": "yes-alt",
 	"description": "A customizable button for donation form submissions.",
+	"parent": [ "stripe-wp/donate-form" ],
 	"example": {},
 	"supports": {
 		"align": true,
@@ -23,10 +24,29 @@
 		}
 	},
 	"attributes": {
+		"align": {
+			"type": "string"
+		},
 		"buttonText": {
 			"type": "string",
 			"source": "html",
-			"selector": "p"
+			"selector": "button"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#fff"
+		},
+		"fontSize": {
+			"type": "string",
+			"default": "medium"
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
 		}
 	},
 	"textdomain": "stripe-wp",

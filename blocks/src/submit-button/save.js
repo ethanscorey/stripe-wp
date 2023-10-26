@@ -1,4 +1,5 @@
 import { RichText, useBlockProps } from '@wordpress/block-editor';
+import classnames from 'classnames';
 
 /**
  * Render front-end for submit button block
@@ -12,7 +13,12 @@ import { RichText, useBlockProps } from '@wordpress/block-editor';
 export default function save( { attributes } ) {
 	return (
 		<RichText.Content
-			{ ...useBlockProps.save() }
+			{ ...useBlockProps.save( {
+				className: classnames( {
+					[ `has-text-align-${ attributes.textAlign }` ]:
+						attributes.textAlign,
+				} ),
+			} ) }
 			tagName="button"
 			value={ attributes.buttonText }
 		/>
