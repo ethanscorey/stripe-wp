@@ -36,6 +36,14 @@
 			"type": "string",
 			"default": "#000"
 		},
+		"hoverBackgroundColor": {
+			"type": "string",
+			"default": "#fff"
+		},
+		"hoverTextColor": {
+			"type": "string",
+			"default": "#000"
+		},
 		"textColor": {
 			"type": "string",
 			"default": "#fff"
