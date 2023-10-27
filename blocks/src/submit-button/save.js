@@ -21,8 +21,6 @@ export default function save( { attributes } ) {
 			} ) }
 			tagName="button"
 			value={ attributes.buttonText }
-			data-text-color={ attributes.textColor }
-			data-background-color={ attributes.backgroundColor }
 			data-hover-text-color={ attributes.hoverTextColor }
 			data-hover-background-color={ attributes.hoverBackgroundColor }
 		/>
